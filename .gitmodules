@@ -1,0 +1,12 @@
+[submodule "Dependency/tolua_runtime"]
+	path = Dependency/tolua_runtime
+	url = https://github.com/topameng/tolua_runtime
+[submodule "Dependency/Debugger"]
+	path = Dependency/Debugger
+	url = https://github.com/topameng/Debugger
+[submodule "Dependency/CString"]
+	path = Dependency/CString
+	url = https://github.com/topameng/CString
+[submodule "Dependency/protoc-gen-lua"]
+	path = Dependency/protoc-gen-lua
+	url = https://github.com/topameng/protoc-gen-lua
