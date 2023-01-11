@@ -86,10 +86,17 @@ public class CallLuaFunction : MonoBehaviour
 
     int CallFunc()
     {        
+        luaFunc.BeginPCall();
         luaFunc.BeginPCall();                
         luaFunc.Push(123456);
         luaFunc.PCall();        
         int num = (int)luaFunc.CheckNumber();
+        luaFunc.EndPCall();
+        Debugger.Log("expansion call return: {0}", num);
+        
+        luaFunc.Push(1);
+        luaFunc.PCall();       
+        num = (int)luaFunc.CheckNumber();
         luaFunc.EndPCall();
         return num;                
     }

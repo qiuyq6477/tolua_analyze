@@ -911,10 +911,10 @@ namespace LuaInterface
 
                 funcMap.Remove(name);
             }
-
-            if (PushLuaFunction(name, false))
+            
+            if (PushLuaFunction(name, false))// 把function放到栈顶
             {
-                int reference = ToLuaRef();
+                int reference = ToLuaRef(); 
 
                 if (funcRefMap.TryGetValue(reference, out weak))
                 {
