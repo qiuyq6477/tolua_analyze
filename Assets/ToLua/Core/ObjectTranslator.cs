@@ -26,6 +26,12 @@ using UnityEngine;
 
 namespace LuaInterface
 {
+    /**
+     * ObjectTranslator主要用于缓存lua需要访问的c# object对象。
+     * 提供了对象池以及添加、查询、删除对象方法。管理对象的生命周期。
+     * LuaObjectPool对象池包含了一个PoolNode对象列表进行循环复用，
+     * PoolNode对象包含对真正object的引用，以及一个当前空闲索引的链表，其策略类似于lua_ref。
+     */
     public class ObjectTranslator
     {        
         private class DelayGC
